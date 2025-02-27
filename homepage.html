@@ -35,6 +35,9 @@
             left: 0;
             top: 0;
             bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .sidebar a {
@@ -48,6 +51,23 @@
         .sidebar a:hover {
             background: #495057;
             border-left: 4px solid #f8f9fa;
+        }
+
+        .social-icons {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #f8f9fa;
         }
 
         .main-content {
@@ -76,13 +96,25 @@
 
     <!-- Sidebar (Sol Menü) -->
     <div class="sidebar">
-        <h4 class="text-center">📚 YDS & YÖKDİL</h4>
-        <a href="#" onclick="goToPage('home')"><i class="fas fa-home"></i> Ana Sayfa</a>
-        <a href="#" onclick="goToPage('quizzes')"><i class="fas fa-pencil-alt"></i> Quizlerim</a>
-        <a href="#" onclick="goToPage('words')"><i class="fas fa-book"></i> Öğrenilen Kelimeler</a>
-        <a href="#" onclick="goToPage('startQuiz')"><i class="fas fa-computer"></i> Quiz Başlat</a>
-        <a href="#" onclick="goToPage('translate')"><i class="fas fa-language"></i> Translation</a>
-        <a href="#" onclick="goToPage('settings')"><i class="fas fa-cog"></i> Ayarlar</a>
+        <div>
+            <h4 class="text-center">📚 YDS & YÖKDİL</h4>
+            <a href="#" onclick="goToPage('home')"><i class="fas fa-home"></i> Ana Sayfa</a>
+            <a href="#" onclick="goToPage('quizzes')"><i class="fas fa-pencil-alt"></i> Quizlerim</a>
+            <a href="#" onclick="goToPage('words')"><i class="fas fa-book"></i> Öğrenilen Kelimeler</a>
+            <a href="#" onclick="goToPage('startQuiz')"><i class="fas fa-computer"></i> Quiz Başlat</a>
+            <a href="#" onclick="goToPage('translate')"><i class="fas fa-language"></i> Translation</a>
+            <a href="#" onclick="goToPage('settings')"><i class="fas fa-cog"></i> Ayarlar</a>
+        </div>
+        <div class="social-icons">
+            <div>
+                <p>Sosyal Medya Hesaplarım</p>
+            </div>
+            <a href="https://github.com/FurkanTurkkk" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/furkan-türk-62a600220/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/_furkan.turkk/?next=%2F" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
     </div>
 
     <!-- Main Content -->
@@ -97,7 +129,8 @@
                         <i class="fas fa-user-circle"></i> Hesap Ayarları
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="accountDropdown">
-                        <li><a class="dropdown-item" href="update_profile.html" onclick="goToPage('update_profile.html')">Profili Güncelle</a>
+                        <li><a class="dropdown-item" href="update_profile.html"
+                                onclick="goToPage('update_profile.html')">Profili Güncelle</a>
                         </li>
                         <li><a class="dropdown-item" href="#" onclick="deleteAccount()">Hesabı Sil</a></li>
                     </ul>
@@ -109,18 +142,27 @@
         </nav>
 
         <!-- Ana İçerik -->
-        <h1 class="mt-4">YDS ve YÖKDİL Sınavına Hazırlık</h1>
+        <h1 class="mt-4" style="color: lightcoral;">YDS ve YÖKDİL Sınavına Hazırlık</h1>
         <p>YDS ve YÖKDİL sınavları akademik kariyer yapmak isteyenler için büyük önem taşımaktadır. Kelime bilgisi,
             okuma anlama ve gramer gibi konulara odaklanarak başarı sağlayabilirsiniz.</p>
-
+        <hr>
         <div class="row mt-4">
             <div class="col-md-6">
-                <h3>Kelime Bilginizi Artırın</h3>
+                <h3 style="color: lightcoral;">Kelime Bilginizi Artırın</h3>
                 <p>Her gün en az 10 yeni kelime öğrenerek sınava hazırlık sürecinizi daha verimli hale getirebilirsiniz.
                 </p>
             </div>
             <div class="col-md-6">
+                <h3 style="color: lightcoral;">Neden Bu Programla Çalışmalıyız?</h3>
+                <ul>
+                    <li>Günlük kelime listeleri ile öğrenmeyi pekiştirin.</li>
+                    <li>Oxford 3000 kelime önerisinde bulunan kelimeleri translate ettikten sonra kendi quizinizi tek
+                        tıkla yapabilirsiniz.</li>
+                    <li>Akıllı algoritma ile eksiklerinizi belirleyin ve güçlendirin.</li>
+                    <li>Kapsamlı çeviri pratikleriyle okuma ve anlamayı geliştirin.</li>
+                </ul>
             </div>
+
         </div>
 
 
