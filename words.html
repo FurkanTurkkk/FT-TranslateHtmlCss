@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenilen Kelimeler</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .table-container {
+            margin-top: 30px;
+        }
+
+        .spinner-border {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        .header-text {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .container {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #343a40;
+            color: white;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        .table-container {
+            max-height: 50vh;
+            overflow-y: auto;
+        }
+
+        #wordsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #wordsTable thead {
+            position: sticky;
+            top: 0;
+            background: #343a40;
+            color: white;
+            z-index: 2;
+        }
+
+        .sidebar a {
+            color: white;
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .sidebar a:hover {
+            background: #495057;
+            border-left: 4px solid #f8f9fa;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container mt-5">
+
+        <div class="sidebar">
+            <h4 class="text-center">📚 YDS & YÖKDİL</h4>
+            <a href="#" onclick="goToPage('home')"><i class="fas fa-home"></i> Ana Sayfa</a>
+            <a href="#" onclick="goToPage('quizzes')"><i class="fas fa-pencil-alt"></i> Quizlerim</a>
+            <a href="#" onclick="goToPage('words')"><i class="fas fa-book"></i> Öğrenilen Kelimeler</a>
+            <a href="#" onclick="goToPage('startQuiz')"><i class="fas fa-computer"></i> Quiz Başlat</a>
+            <a href="#" onclick="goToPage('translate')"><i class="fas fa-language"></i> Translation</a>
+            <a href="#" onclick="goToPage('settings')"><i class="fas fa-cog"></i> Ayarlar</a>
+        </div>
+
+        <h3 class="text-center header-text">📖 Öğrenilen Kelimeler</h3>
+        <div class="table-container">
+            <table id="wordsTable" class="table table-bordered table-hover d-none">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Original Word</th>
+                        <th>Translated Word</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="words.js"></script>
+
+    <script src="homepage.js"></script>
+</body>
+
+</html>
